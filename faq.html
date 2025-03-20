@@ -25,13 +25,39 @@
     }
 
     body {
-      background: var(--background-color);
+      background: url('back.jpg') no-repeat center center fixed; /* Add your image path here */
+      background-size: cover; 
       color: var(--secondary-color);
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--card-bg);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px var(--shadow-color);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--primary-color);
     }
 
     .container {
@@ -43,6 +69,7 @@
       border: 1px solid var(--border-color);
       box-shadow: 0 4px 6px var(--shadow-color);
       backdrop-filter: blur(10px);
+      margin-top: 80px; /* Adjusted margin to avoid overlap with navbar */
     }
 
     h2 {
@@ -94,6 +121,16 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div>
+      <a href="mp.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="explore.html">Explore</a>
+    </div>
+  </div>
+
+  <!-- FAQ Container -->
   <div class="container">
     <h2>Frequently Asked Questions</h2>
     
