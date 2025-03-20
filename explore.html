@@ -25,7 +25,8 @@
     }
 
     body {
-      background: var(--background-color);
+      background: url('back.jpg') no-repeat center center fixed; /* Add your image path here */
+      background-size: cover; 
       color: var(--secondary-color);
       display: flex;
       flex-direction: column;
@@ -33,9 +34,35 @@
       min-height: 100vh;
     }
 
+    /* Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--card-bg);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px var(--shadow-color);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+
     .container {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 80px auto 40px; /* Adjusted margin to avoid overlap with navbar */
       padding: 40px 20px;
       text-align: center;
     }
@@ -114,6 +141,16 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div>
+      <a href="mp.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="explore.html">Explore</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
   <div class="container">
     <h1>Explore AI & Tech</h1>
     <p>Discover AI topics, tools, and innovations that are shaping the future.</p>
@@ -141,18 +178,6 @@
         <img src="4.png" alt="AI Robotics">
         <h3>AI in Robotics</h3>
         <p>Discover how AI powers modern robotics and automation.</p>
-      </div>
-
-      <div class="card">
-        <img src="cv.jpg" alt="Computer Vision">
-        <h3>Computer Vision</h3>
-        <p>Dive into image recognition, object detection, and facial recognition.</p>
-      </div>
-
-      <div class="card">
-        <img src="nlp.jpg" alt="NLP">
-        <h3>Natural Language Processing</h3>
-        <p>Understand NLP models, chatbots, and AI-powered translations.</p>
       </div>
     </div>
   </div>
