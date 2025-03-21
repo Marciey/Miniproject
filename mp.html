@@ -55,11 +55,20 @@
       font-size: 1.5rem;
       font-weight: bold;
       color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      margin-right: 10px;
+      width: 90px; /* Adjust the size as needed */
+      height: auto;
     }
 
     .nav-links {
       display: flex;
       gap: 20px;
+      align-items: center;
     }
 
     .nav-item {
@@ -73,6 +82,47 @@
 
     .nav-item:hover {
       background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Profile Dropdown */
+    .profile-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-dropdown img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px var(--shadow-color);
+      z-index: 1;
+      min-width: 160px;
+    }
+
+    .dropdown-content a {
+      color: var(--secondary-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-dropdown:hover .dropdown-content {
+      display: block;
     }
 
     /* Hero Section */
@@ -173,14 +223,20 @@
 
   <!-- Navigation -->
   <div class="nav-menu">
-    <div class="nav-logo">AI Educator</div>
+    <div class="nav-logo">
+      <img src="logo.png" alt="AI Educator Logo">
+      
+    </div>
     <div class="nav-links">
       <a href="explore.html" class="nav-item">Explore</a>
       <a href="faq.html" class="nav-item">FAQ</a>
-      <!-- Replace Login link with image -->
-      <a href="login.html" class="nav-item">
-        <img src="img.png" alt="Login" style="width: 24px; height: 24px;">
-      </a>
+      <!-- Profile Dropdown -->
+      <div class="profile-dropdown">
+        <img src="img.png" alt="Profile">
+        <div class="dropdown-content">
+          <a href="login.html">Login/Signup</a>
+        </div>
+      </div>
     </div>
   </div>
 
